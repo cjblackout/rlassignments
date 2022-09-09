@@ -1,4 +1,4 @@
-# rlassignments
+# Reinforcement Learning Assignments
 Reinforcement Learning Assignments
 
 
