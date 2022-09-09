@@ -1,0 +1,33 @@
+Task 2 - Value Iteration
+
+Answers:
+
+
+6) 	Rounds of value iteration for start state to become non-zero: 12
+    Why? 
+	all values are are initialized with zero. reward is only given
+	when the terminal state is reached. given the action set {"north" "east" "south" "west"},
+	a non zero value of a cell can only affect the four neighbouring cells
+	during one iteration step. therefore it takes cardinality of the smallest viable action set 
+	as the minimum number of iterations in this example.
+
+7) 	Which parameter to change: n
+	Value of the changed parameter: about n = 0.0169545
+	since the noise leads to an outcome  other than the chosen action, there is a negative
+	expected value component associated with falling of the bridge even though the "correct" 
+	action was chosen. The expected value of this
+	component is directly dependent on the noise level.
+
+8)	Parameter values producing optimal policy types:
+	    a) -n 0 -d 0.316 (smaller sqrt(0.1))
+	    b) -n 0.2 -d 0.316
+	    c) -n 0 -d 0.317
+	    d) -n 0.2 -d 0.317
+	    e) this is not possible.
+
+9) 	Pros: 								Cons:
+		- pi has faster convergence			- pi is more complex (~20% more code in our implementation)
+		- for vi the getPolicy method		- policy evaluation and improvement are 2 distinct steps, resulting in more code in the __init__ method
+		  is way more involved since 
+		  the policy has to be constructed
+		  from the (q)-value function			

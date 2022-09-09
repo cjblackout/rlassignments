@@ -1,0 +1,9 @@
+Task 1 - Policy Iteration
+
+Answers:
+
+
+7) 	Rounds of policy iteration for start state to become non-zero: 4
+    note: the task text asks for the number of rounds of policy evaluation. due to the poor start policy which is not affected during policy evaluation the value of the start state will not change no matter the number of iterations during the first policy evaluation
+
+8) 	Rounds of policy iteration to converge to an optimal policy: 4

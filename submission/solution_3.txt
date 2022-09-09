@@ -1,0 +1,18 @@
+Task 3 - Q-Learning
+
+Answers:
+
+
+6) 	Training the Q-learning agent without noise:
+        a) Value at state (1, 5):   0.000000
+        b) Optimal policy : no
+        c) Name of parameter: epsilon = 1.0 and k >> 100, then we have a random agent which eventually explore the entire (finite) environment. and will not be put off by falling of the bridge in previous runs.
+
+7) 	Comparison of values for the start state:
+        1) Value of the start state after 300 episodes: -2.69
+        2) Average returns from the start state: -9.859
+        the average return from start is lower since we sometimes do not enact our policy, and fall
+        off the cliff (-100 reward). since the value is the sum of the q values weighted by our policy those q values corresponding to random moves get a low weight thus the value is higer.
+8)  Faster converging algorithm? value iteration. Q learning is inherently random and dependent on the start state of the episodes.
+therefore there is allways a chance it will not necessarily discover the optimal policy in any finite number of episodes, especially for the states that are not a part of the optimal trajectory from the start state to the terminal state of each episode.
+
